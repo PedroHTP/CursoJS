@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+</head>
+<body>
+    <h1>De que país você é?</h1>
+    <input type="text" name="pais" id="pais" placeholder="País">
+    <input type="button" value="Consultar" id=txtpais>
+    <div id="res">
+
+    </div>
+
+    <script>
+        var btn_pais = document.querySelector('input#txtpais')
+        btn_pais.addEventListener('click', consultar)
+
+            function consultar() {
+                var pais = document.querySelector('input#pais').value
+                var res = document.querySelector('div#res')
+
+                if (pais == 'Brasil') {
+                    res.innerHTML = `<p>Você é brasileiro.</p>`
+                } else {
+                    res.innerHTML = `<p>Você é estrangeiro.</p>`
+                }
+            }
+    </script>
+</body>
+</html>
