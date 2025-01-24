@@ -3,31 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modelo de Exercício</title>
+    <title>Verificador de Idade</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <h1>Título</h1>
+        <h1>Verificador de Idade</h1>
     </header>
 
     <section>
         <div>
             <label for="nascimento">Data de nascimento:</label>  
-            <input type="date" name="nascimento" id="nascimento">
+            <input type="date" name="nascimento" id="nascimento" value="2007-05-20">
         </div>
-        <h2></h2>
         <div>
             <label>Sexo:</label>
-            <input type="radio" name="sexo" id="masculino" value="masculino" onclick="masculino()"> 
+            <input type="radio" name="sexo" id="masculino" checked> 
             <label for="masculino">Masculino</label>
-            <input type="radio" name="sexo" id="feminino" value="feminino" onclick="feminino()">
+            <input type="radio" name="sexo" id="feminino">
             <label for="feminino">Feminino</label>
         </div>
         <div>
-            <p id="msg"></p>
+            <input type="button" value="Calcular" onclick="calcular()">
         </div>
-        <button type="submit" onclick="calcular()">Calcular</button>
+            <div id="msg">
+                Preencha os dados acima para ver o resultado!
+            </div>
+
+            <div id="img">
+
+            </div>
     </section>
     <footer>
         <p>&copy; CursoemVídeo</p>
